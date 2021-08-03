@@ -1,12 +1,11 @@
 // initialize modules 
-const {scr, dest, watch, series} = require('gulp');
+const {src, dest, watch, series} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
-const { pipe } = require('rxjs');
 const browsersync = require('browser-sync').create();
 
 // Use dart-sass for use 
@@ -14,7 +13,7 @@ const browsersync = require('browser-sync').create();
 
 // Sass task
 function scssTask(){
-  return scr('app/scss/style.scss', {sourcemaps: true})
+  return src('app/scss/style.scss', {sourcemaps: true})
   .pipe(sass())
   .pipe(postcss([autoprefixer(), cssnano()]))
   .pipe(dest('dist', {sourcemap: '.'}));
@@ -22,8 +21,8 @@ function scssTask(){
 
 // Javascript Task
 function jsTask(){
-  return scr ('app/js/script.js', {sourcemap: true})
-  .pipe(babel({presets: ['@babel/presets-env']}))
+  return src ('app/js/script.js', {sourcemap: true})
+  .pipe(babel({presets: ['@babel/preset-env']}))
   .pipe(terser())
   .pipe(dest('dist', {sourcemaps: '.'}));
 }
@@ -59,4 +58,4 @@ function watchTask(){
 }
 
 // Defualt Gulp Task
-exports.default = series(scssTask, jsTask, browserSyncReload, watchTask);
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
