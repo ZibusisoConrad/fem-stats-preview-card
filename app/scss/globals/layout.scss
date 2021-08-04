@@ -1,3 +1,28 @@
 @use '../util' as *;
 
 // define your layout here i think
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  max-width: 325px;
+  height: 100%;
+
+  @include breakpoint(xlarge){
+    padding: 0;
+  }
+}
+
+.footer {
+  height: 25px;
+}

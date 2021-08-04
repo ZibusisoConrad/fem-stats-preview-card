@@ -1,0 +1,60 @@
+.card {
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+
+  &_img_overlay {
+    position: absolute;
+    width: 325px;
+    height: 240px;
+    background-color: var(--violet-accent);
+    opacity: 0.4;
+    border-radius: 10px 10px 0 0;
+    
+  }
+
+  &_img {
+    width: 325px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 30px;
+  }
+
+  &_text_wrapper{
+    padding: 15px;
+  }
+
+  &_heading {
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    span {
+      color: var(--violet-accent);
+    }
+  }
+
+  &_paragraph {
+    font-weight: 400;
+    letter-spacing: 0.575px;
+    line-height: 1.725;
+    margin-bottom: 30px;
+    color: var(--main-para-white);
+  }
+
+  &_stats {
+    h1 {
+      margin-bottom: 10px;
+    }
+    p {
+      text-transform: uppercase;
+      color: var(--stat-heading-white);
+    }
+  }
+
+}
+
+.stat {
+  margin-bottom: 20px;
+  font-family: var(--font-Lexend);
+}
