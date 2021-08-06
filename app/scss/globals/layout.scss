@@ -2,27 +2,42 @@
 
 // define your layout here i think
 
-main {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+main {
+  margin-bottom: -rem(25);
+  min-height: 100%;
+}
+
 .container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  max-width: 325px;
+  max-width: rem(325);
   height: 100%;
 
-  @include breakpoint(xlarge){
+  @include breakpoint(large) {
     padding: 0;
+    min-width: rem(1110);
+    height: auto;
+  }
+}
+
+.card {
+  @include breakpoint(large) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &_stats {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
 .footer {
-  height: 25px;
+  height: rem(25);
+  margin-top: rem(25);
 }
