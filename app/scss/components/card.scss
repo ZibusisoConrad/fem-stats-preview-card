@@ -4,20 +4,17 @@
   border-radius: rem(15);
   background-color: var(--card-bg);
 
-  &_img {
-    position: relative;
+  &_img{
+    // position: relative;
     width: rem(325);
     height: rem(240);
-    object-fit: contain;
     border-radius: 15px 15px 0 0;
     margin-bottom: rem(30);
-  }
-
-  &_img_overlay {
-    position: absolute;
+    background: url(../../../images/image-header-mobile.jpg);
+    background-size: cover;
+    background-blend-mode:  multiply;
     background-color: var(--violet-accent);
-    opacity: 0.5;
-    z-index: 200;
+    // opacity: 0.99;
   }
 
   &_text_wrapper {
