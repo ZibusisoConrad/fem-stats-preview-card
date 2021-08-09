@@ -9,12 +9,12 @@
     width: rem(325);
     height: rem(240);
     border-radius: 15px 15px 0 0;
-    margin-bottom: rem(30);
+    margin-bottom: rem(25);
     background: url(../../../images/image-header-mobile.jpg);
     background-size: cover;
     background-blend-mode:  multiply;
     background-color: var(--violet-accent);
-    // opacity: 0.99;
+    opacity: 0.7;
   }
 
   &_text_wrapper {
@@ -22,7 +22,7 @@
   }
 
   &_text {
-    margin-bottom: rem(30);
+    margin-bottom: rem(40);
   }
 
   &_title {
@@ -34,30 +34,30 @@
   }
 
   &_paragraph {
-    letter-spacing: rem(0.575);
-    line-height: 1.75;
+    // letter-spacing: rem(0.575);
+    line-height: 1.6;
     color: var(--main-para-white);
   }
 
   &_stat {
-    margin-bottom: rem(15);
+    margin-bottom: rem(30);
   }
 
   &_stat_number {
     font-weight: 700;
-    font-size: rem(18);
+    font-size: rem(24);
   }
 
   &_stat_heading {
     font-size: rem(12);
     color: var(--stat-heading-white);
     text-transform: uppercase;
-    margin-top: rem(5);
+    margin-top: rem(10);
   }
 
   @include breakpoint(large) {
     &_img {
-      width: rem(540);
+      min-width: rem(540);
       height: rem(440);
       margin: 0;
       border-radius: 0 15px 15px 0;
@@ -66,27 +66,36 @@
 
     &_text_wrapper {
       text-align: start;
-      width: rem(400);
       padding: 0;
       margin-left: rem(70);
+      margin-right: 100px;
     }
 
     &_title {
+      letter-spacing: 1.6px;
       line-height: 1.5;
       font-size: 2rem;
     }
 
     &_paragraph {
+      width: rem(380);
       margin-bottom: rem(40);
     }
 
     &_stats {
+      width: rem(350);
       justify-content: space-between;
-      width: 100%;
+      align-self: start;
+      // margin-right: 80px;
+      // width: 100%;
     }
 
     &_stat {
       margin-bottom: 0;
     }
   }
+}
+
+.br {
+  border: red 2px solid;
 }
