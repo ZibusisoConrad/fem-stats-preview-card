@@ -1,6 +1,6 @@
 :root {
   --font-inter: "Inter", san-serif;
-  --font-Lexend: "Lexend Deca", san-serif;
+  --font-lexend: "Lexend Deca", san-serif;
 }
 
 :root {
@@ -26,7 +26,6 @@ html {
 }
 
 body {
-  padding: 0;
   font-family: var(--font-inter);
   font-size: 0.9375rem;
   background-color: var(--dark-blue-bg);
@@ -39,7 +38,7 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  line-height: 1.1;
+  line-height: 1.5;
   color: var(--main-heading-white);
 }
 
@@ -106,7 +105,6 @@ main {
   padding: 0.9375rem;
 }
 .card_text {
-  padding: 0;
   margin-bottom: 1.875rem;
 }
 .card_title {
@@ -123,7 +121,12 @@ main {
 .card_stat {
   margin-bottom: 0.9375rem;
 }
+.card_stat_number {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
 .card_stat_heading {
+  font-size: 0.75rem;
   color: var(--stat-heading-white);
   text-transform: uppercase;
   margin-top: 0.3125rem;

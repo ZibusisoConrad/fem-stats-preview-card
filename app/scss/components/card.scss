@@ -22,7 +22,6 @@
   }
 
   &_text {
-    padding: 0;
     margin-bottom: rem(30);
   }
 
@@ -44,7 +43,13 @@
     margin-bottom: rem(15);
   }
 
+  &_stat_number {
+    font-weight: 700;
+    font-size: rem(18);
+  }
+
   &_stat_heading {
+    font-size: rem(12);
     color: var(--stat-heading-white);
     text-transform: uppercase;
     margin-top: rem(5);

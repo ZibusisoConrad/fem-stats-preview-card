@@ -20,12 +20,12 @@ function scssTask(){
 }
 
 // Javascript Task
-function jsTask(){
-  return src ('app/js/script.js', {sourcemap: true})
-  .pipe(babel({presets: ['@babel/preset-env']}))
-  .pipe(terser())
-  .pipe(dest('dist', {sourcemaps: '.'}));
-}
+// function jsTask(){
+//   return src ('app/js/script.js', {sourcemap: true})
+//   .pipe(babel({presets: ['@babel/preset-env']}))
+//   .pipe(terser())
+//   .pipe(dest('dist', {sourcemaps: '.'}));
+// }
 
 // Browsersync 
 function browserSyncServe(cb){
@@ -52,10 +52,10 @@ function browserSyncServe(cb){
 function watchTask(){
   watch('*.html', browserSyncReload);
   watch(
-    ['app/scss/**/*.scss', 'app/**/*.js'], 
-    series(scssTask, jsTask, browserSyncReload)
+    ['app/scss/**/*.scss'], 
+    series(scssTask, browserSyncReload)
   );
 }
 
 // Defualt Gulp Task
-exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(scssTask, browserSyncServe, watchTask);
