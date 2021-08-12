@@ -1,25 +1,27 @@
 @use '../util/' as *;
 
-html{
-  font-size: 100%;
+/* boilerplate */
+
+/* specify css rests and defaults for specific project */
+
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body{
-  font-family: var(--font-inter);
-  font-size: rem(15);
-  background-color: var(--dark-blue-bg);
-  color: var(--main-para-white);
+body {
+  background-color: var(--clr-dark-blue-bg);
   text-align: center;
-  height: 100vh;
+  height: 120vh;
 
-  // border: red 2px solid;
+  @include breakpoint(large) {
+    height: 100vh;
+  }
 }

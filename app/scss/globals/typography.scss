@@ -1,15 +1,73 @@
-@use '../util' as *;
+@use 'util' as *;
+
+/* typography */
+
+/* all type related stuff in here including font-size and color */
+
+html {
+  font-size: 100%;
+}
 
 h1,
 h2,
 h3 {
   margin-top: 0;
-  // line-height: 1.2;
-  color: var(--main-heading-white);
 }
 
 a,
 a:visited,
 a:active { 
   text-decoration: none;
+}
+
+li {
+ list-style: none;
+}
+
+body {
+  font-size: rem(15);
+  font-family: var(--font-inter-lexend);
+  color: var(--clr-main-para-white);
+}
+
+.card{
+  &_title {
+    font-size: rem(28);
+    line-height: 1.1;
+    color: var(--clr-main-heading-white);
+  }
+
+  &_title--accent {
+    color: var(--clr-violet-accent);
+  }
+
+  &_paragraph {
+    color: var(--clr-main-para-white);
+    line-height: 1.6;
+  }
+
+  &_stat:last-child {
+    text-transform: uppercase;
+  }
+  
+  &_stat_number {
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &_stat_heading {
+    color: var(--clr-stat-heading-white);
+    font-size: rem(12);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(large){
+
+    &_title {
+      font-size: rem(38);
+    }
+
+  }
+
 }

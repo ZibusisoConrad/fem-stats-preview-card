@@ -15,9 +15,12 @@
     <title>Frontend Mentor | Stats preview card component</title>
 
     <!--Google Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Style sheets -->
     <link rel="stylesheet" href="/dist/style.css" />
@@ -39,36 +42,50 @@
     <main class="flex">
       <div class="container">
         <div class="card flex">
-          <div class="card_img ">
-            <!-- <div class="card_img card_img_overlay"></div> -->
-            <!-- <div class="card_img"></div> -->
+          <div class="card_img_wrapper card_img_radius">
+            <picture>
+              <source
+                media="(min-width: 375px)"
+                srcset="./images/image-header-mobile.jpg"
+              />
+              <source
+                media="(min-width: 1440px)"
+                srcset="./images/image-header-desktop.jpg"
+              />
+
+              <img
+                class="card_img card_img_radius"
+                src="./images/image-header-mobile.jpg"
+                alt=""
+              />
+            </picture>
           </div>
-          <div class="card_text_wrapper  flex">
-            <div class="card_text ">
-              <h1 class="card_title ">
-                Get <span class=" card_title--accent">insights</span> that help
+          <div class="card_text_wrapper">
+            <div class="card_text">
+              <h1 class="card_title">
+                Get <span class="card_title--accent">insights</span> that help
                 your business grow.
               </h1>
-              <p class="card_paragraph ">
+              <p class="card_paragraph">
                 Discover the benefits of data analytics and make better
                 decisions regarding revenue, customer experience, and overall
                 efficiency.
               </p>
             </div>
-            <div class="card_stats flex">
-              <div class="card_stat ">
+            <ul class="card_stats flex">
+              <li class="card_stat">
                 <p class="card_stat_number">10k+</p>
                 <p class="card_stat_heading">companies</p>
-              </div>
-              <div class="card_stat">
+              </li>
+              <li class="card_stat">
                 <p class="card_stat_number">314</p>
                 <p class="card_stat_heading">templates</p>
-              </div>
-              <div class="card_stat">
-                <p class="card_stat_number">12M+</p>
+              </li>
+              <li class="card_stat">
+                <p class="card_stat_number">12m+</p>
                 <p class="card_stat_heading">queries</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

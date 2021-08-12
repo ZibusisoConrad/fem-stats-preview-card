@@ -1,4 +1,22 @@
+/* SCSS IS USED IN THIS PROJECT.
+
+// EVERY THIS WAS STYLED SEPARATELY E.G TYPOGRAPHY ON ITS ON THEN LAYOUT AND SO ON.
+// BELLOW IS A GUIDE TO HOW STYLES FOLLOW EACH OTHER 
+
+// *** FONTS 
+// *** COLORS 
+// *** TYPOGRAPHY 
+// *** BOILERPLATE 
+// *** LAYOUT
+// *** CARD STYLES
+
+*/
+
+
+/* fonts */
+
+/* set main font and fallback font */
+
 :root {
-  --font-inter: 'Inter', san-serif;
-  --font-lexend: 'Lexend Deca', san-serif;
+  --font-inter-lexend: "Inter", "Lexend Deca", sans-serif;
 }
