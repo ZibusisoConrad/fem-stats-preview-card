@@ -26,7 +26,7 @@ li {
 
 body {
   font-size: rem(15);
-  font-family: var(--font-inter-lexend);
+  font-family: var(--font-inter);
   color: var(--clr-main-para-white);
 }
 
@@ -57,6 +57,7 @@ body {
 
   &_stat_heading {
     color: var(--clr-stat-heading-white);
+    font-family: var(--font-lexend);
     font-size: rem(12);
     letter-spacing: 1.2px;
     text-transform: uppercase;
